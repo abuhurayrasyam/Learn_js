@@ -1,3 +1,15 @@
+/*Some Objects Methods :
+--To see a object property/keys value use: console.log(objectName.property); / console.log(objectName["property"]);
+--To add a property and value in a object use: objectName.property = value; / objectName[property] = value; 
+--To see objects all keys use: console.log(object.keys(objectName));
+--To see objects all values use: console.log(object.values(objectName));
+--To delete a property use: delete objectName.propertyName;
+--To access a object using for in use:
+    for(const name in objectName){
+        console.log(name);
+    }
+*/
+
 //Task-1 : Access the golden rod color value in output.
 const colors = {
     red: "#ff0000",
