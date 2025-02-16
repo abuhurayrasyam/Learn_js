@@ -1,3 +1,17 @@
+/*Some Strings Methods :
+--To write a string use ''/""/``
+--String is immutable(not changeable)
+--In string lowercase and uppercase are not same. To convert full string in lowercase use: variableName.toLowercase() and to covert full string in uppercase use: variableName.toUppercase()
+--To hide space from start and end of a sentence use: variableName.trim()
+--To get some char or words from a string use: variableName.slice(first index number,last index number)
+--To covert a string's words in a array use: variableName.split("space")
+--To attach a full arrays all element use: variableName.join("space")
+--To reverse a string use: 
+    const variableName = stringVariableName.split("space").reverse().join("space");
+    console.log(variableName);
+*/
+
+
 //Task-1: Count how many times a string has the letter a.
 let str01 = "Count how many times a string has the letter a";
 let countA = 0;
