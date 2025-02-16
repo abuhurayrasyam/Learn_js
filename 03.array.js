@@ -1,3 +1,19 @@
+/*Some Arrays Methods :
+--We can use for of loop, for loop and while loop in a array.
+--To reverse a array use: 
+    Using method: arrayName.revers()
+    Using loop: 
+        const newArrayName = [];
+        for(let i = arrayName.length - 1; i >= 0; i--){
+            const variableName = arrayName[i];
+            newArrayName.push(variableName);
+        }
+        console.log(newArrayName);
+--To sort a string array use: arrayName.sort();
+--To ascending a number array use: [...arrayName].sort(function(a,b){return a-b});
+--To descending a number array use: [...arrayName].sort(function(a,b){return b-a});
+*/
+
 //Part-01
 
 //Task-01 : Declare an array
@@ -88,6 +104,7 @@ for (let name of names){
 console.log(newName);
 
 //Task 4 : Reverse the words of a sentence. Only the position of the word will be reversed. check out the output.
+//One Way:
 const statement = 'I am a hard working person';
 const statementsArray = statement.split(" ");
 const reverseStatementsArray = [];
@@ -96,3 +113,7 @@ for (let i = statementsArray.length - 1; i >= 0; i--){
     reverseStatementsArray.push(statementArray);
 }
 console.log(reverseStatementsArray.join(" "));
+//Another Way:
+const statement1 = 'WE am a hard working person';
+const reverseStatement1 = statement1.split(" ").reverse().join(" ")
+console.log(reverseStatement1)
