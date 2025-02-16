@@ -1,3 +1,5 @@
+//Part-01
+
 //Task-01 : Declare an array
 let fruits = ["apple", "orange", "mango", "jackfruit", "grape"]; // Declare an array with 5 elements containing fruits
 console.log(fruits);
@@ -52,5 +54,45 @@ let foods = food01.concat(food02);
 console.log(food01);
 console.log(food02);
 console.log(foods);
+console.log(foods.length); // Length of a array
+console.log(foods[3]) // value find using index number
 
 
+
+//Part-02
+//Task 1 : Write a JavaScript code to reverse the array colors without using the reverse method.
+const colors = ['red', 'blue', 'green', 'yellow', 'orange'];
+const reverseColors = [];
+for (let i = colors.length - 1; i >= 0; i--){
+    const color = colors[i];
+    reverseColors.push(color);
+}
+console.log(reverseColors);
+
+//Task 2 : Write a JavaScript code to get the even numbers from an array using any looping technique.
+const numbers = [12, 98, 5, 41, 23, 78, 46];
+for (let i = 0; i < numbers.length; i++){
+    const num = numbers[i];
+    if (num % 2 !== 0){
+        continue;
+    }
+    console.log(num);
+}
+
+//Task 3 : Use a for...of loop to concatenate all the elements of an array into a single string.
+var names = ['Tom', 'Tim', 'Tin', 'Tik'];
+let newName = '';
+for (let name of names){
+    newName += name;
+}
+console.log(newName);
+
+//Task 4 : Reverse the words of a sentence. Only the position of the word will be reversed. check out the output.
+const statement = 'I am a hard working person';
+const statementsArray = statement.split(" ");
+const reverseStatementsArray = [];
+for (let i = statementsArray.length - 1; i >= 0; i--){
+    const statementArray = statementsArray[i];
+    reverseStatementsArray.push(statementArray);
+}
+console.log(reverseStatementsArray.join(" "));
