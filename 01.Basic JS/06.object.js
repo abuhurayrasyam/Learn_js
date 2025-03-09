@@ -62,4 +62,3 @@ let myObject = {
 for (let key in myObject){
     console.log("Key:", key, "|", typeof(myObject));
 }
-
