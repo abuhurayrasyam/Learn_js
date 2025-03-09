@@ -26,7 +26,3 @@ class SmartPhone extends Mobile {
 }
 const phone2 = new SmartPhone('Samsung', 'Galaxy S21', 'Black', 799, 'Android');
 console.log(phone2.getDetails()); //output: Samsung Galaxy S21 (Black) - $799 - Android
-
-
-  
-  

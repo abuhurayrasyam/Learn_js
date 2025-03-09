@@ -22,4 +22,3 @@ console.log(phone4.getDetails()); //output: Nokia 3310 (Blue) - $undefined
 
 const phone5 = new Mobile('Nokia', '3310', 'Blue', 50);
 console.log(phone5.getPrice()); //output: $50
-
