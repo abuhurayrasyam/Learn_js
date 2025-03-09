@@ -19,10 +19,10 @@
         }/* style using class name with id name */
     </style>
 </head>
-<body>
+<body id="main-container">
     <h1 id="title">Welcome to Document Object Model</h1>
 
-    <section>
+    <section id="holy-books-container">
         <h4>The Holy Books</h4>
         <ul id="holy-books">
             <li class="holy-book">Quran</li>
@@ -40,21 +40,23 @@
         </ul>
     </section>
 
-    <!-- <section>
-        <h4>My Favorite Fruits</h4>
-        <ul>
-            <li>Watermelon</li>
-            <li>Mango</li>
-            <li>Lychee</li>
+    <section id="animals-container">
+        <h4 id="animal-title">My Favorite Animals</h4>
+        <ul id="animals">
+            <li class="animal">Cat</li>
+            <li class="animal">Tiger</li>
+            <li class="animal">Lion</li>
         </ul>
-    </section> -->
+    </section>
 
-    <!-- <h4>My Favorite Animals</h4>
-    <ul>
-        <li>Cat</li>
-        <li>Tiger</li>
-        <li>Lion</li>
-    </ul> -->
+    <section id="fruits-container-id" class="fruits-container-class">
+        <h4 id="fruits-title-id">My Favorite Fruits</h4>
+        <ul>
+            <li class="fruit">Watermelon</li>
+            <li class="fruit">Mango</li>
+            <li class="fruit">Lychee</li>
+        </ul>
+    </section>
 
     <script src="01.dom.js"></script>
 </body>
