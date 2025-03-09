@@ -24,3 +24,26 @@ document.getElementById('btn-update-page-title')
         const pageTitleElement = document.getElementById('page-title');
         pageTitleElement.innerText = 'Welcome to Events Handler';
     }); //এখানে anonymous ফাংশনের মাধ্যমে ইভেন্টের কাজ সম্পন্ন করা হয়েছে। (recommended)
+
+document.getElementById('btn-update-text')
+    .addEventListener('click', function(){
+        const textInput = document.getElementById('input-text-write-here');
+
+        const updateText = textInput.value;
+
+        const showText = document.getElementById('text-will-showing-here');
+        showText.innerText = updateText;
+    })
+
+document.getElementById('btn-comment-post')
+    .addEventListener('click', function(){
+        const commentInput = document.getElementById('input-comment');
+
+        const newComment = commentInput.value;
+
+        const commentElement = document.createElement('p');
+        commentElement.innerText = newComment;
+
+        const commentContainer = document.getElementById('comment-container');
+        commentContainer.appendChild(commentElement);
+    })
