@@ -107,9 +107,9 @@ console.log(getInnerByHTML);
 //output: Dhaka
 
 //innerHTML = 'newHTML'
-const setByInnerByHTML = document.getElementsByClassName('city')[0].innerHTML = '<h1>Mymenshing</h1>'; //innerHTML একটি HTML এলিমেন্টের ভিতরের সমস্ত HTML কন্টেন্ট নিয়ে কাজ করে। এটি এলিমেন্টের ভিতরের HTML কন্টেন্টকে গ্রহণ বা সেট বা গ্রহণ করতে ব্যবহৃত হয়।
+const setByInnerByHTML = document.getElementsByClassName('city')[0].innerHTML = '<li>Mymenshing</li>'; //innerHTML একটি HTML এলিমেন্টের ভিতরের সমস্ত HTML কন্টেন্ট নিয়ে কাজ করে। এটি এলিমেন্টের ভিতরের HTML কন্টেন্টকে গ্রহণ বা সেট বা গ্রহণ করতে ব্যবহৃত হয়।
 console.log(setByInnerByHTML);
-//output on console: <h1>Mymenshing</h1>
+//output on console: <li>Mymenshing</li>
 //output on browser: Mymenshing
 
 //.getAttribute('attributeType')
