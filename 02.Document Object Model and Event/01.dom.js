@@ -167,6 +167,3 @@ sectionDress.innerHTML = `
 `;
 
 mainContainer02.appendChild(sectionDress);
-
-
-
