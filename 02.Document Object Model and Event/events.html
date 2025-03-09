@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+</head>
+<body>
+    <h1 id="page-title">Welcome to DOM Events</h1>
+    <!-- option 01 for event handler-->
+    <button onclick="console.log('Hello World')">Click Me</button><br><br>
+    <!-- output on browser's console: Hello World -->
+
+    <!-- option 02 for event handler-->
+    <button onclick="makeBodyGreen()">Make Body Green</button> <!-- onclick এ internal js এর ফাংশন কানেক্ট এর মাধ্যমে ইভেন্ট হ্যান্ডেল করা হয়েছে। -->
+    <!-- output: body's background color will be green -->
+    <button id="btn-make-body-blue">Make Body Blue</button><br><br> <!-- internal js এর সাথে id কানেক্ট এর মাধ্যমে ইভেন্ট হ্যান্ডেল করা হয়েছে। -->
+    <!-- output: body's background color will be blue -->
+
+    <!-- option 03 for event handler (recommended)-->
+    <button id="btn-make-body-purple">Make Body Purple</button> <!-- external js এর সাথে id কানেক্ট এর মাধ্যমে ইভেন্ট হ্যান্ডেল করা হয়েছে। -->
+    <button id="btn-make-body-gold">Make Body Gold</button><br><br> <!-- external js এর সাথে id কানেক্ট এর মাধ্যমে ইভেন্ট হ্যান্ডেল করা হয়েছে। -->
+    <button id="btn-update-page-title">Update Page Title</button> <!-- external js এর সাথে id কানেক্ট এর মাধ্যমে ইভেন্ট হ্যান্ডেল করা হয়েছে। -->
+    
+    <!-- this internal js for option 02 of event handler -->
+    <script>
+        //
+        function makeBodyGreen(){
+            document.body.style.backgroundColor = 'green';
+        }
+
+        const btnMakeBodyBlue = document.getElementById('btn-make-body-blue');
+        btnMakeBodyBlue.onclick = function makeBodyBlue(){
+            document.body.style.backgroundColor = 'blue';
+        }
+    </script>
+    <!-- this external js for option 03 of event handler -->
+    <script src="./02.events.js"></script> 
+</body>
+</html>
