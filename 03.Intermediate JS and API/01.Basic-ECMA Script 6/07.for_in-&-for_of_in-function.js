@@ -11,5 +11,3 @@ for (let key in person02){
 for (let [key, value] of Object.entries(person02)){
     console.log(`${key} : ${value}`);
 } //for of
-
-
