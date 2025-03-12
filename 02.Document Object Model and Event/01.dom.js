@@ -1,7 +1,7 @@
 //এই ফাইলটি dom.html এর সাথে connected.
 
 //DOM কাকে বলে?
-//DOM হচ্ছে Document Object Model. DOM এ, html এর প্রতিটি element এক একটি object হিসেবে বিবেচিত হয় এবং এই অবজেক্ট গুলোকে node বলা হয়।
+//DOM হচ্ছে Document Object Model. DOM এ, html এর প্রতিটি element এক একটি object হিসেবে বিবেচিত হয় এবং এই object গুলোকে node বলা হয়।
 
 //DOM এর মাধ্যমে কি কাজ করা হয়?
 //DOM ব্যবহার করা হয় html এর মধ্যে ইন্টারেকশন করার জন্য। অর্থাৎ DOM ব্যবহারের মাধ্যমে DOM traversing, element select এবং তাদের প্রপার্টিগুলোকে পরিবর্তন করা হয়।
