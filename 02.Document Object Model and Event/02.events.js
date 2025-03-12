@@ -25,25 +25,46 @@ document.getElementById('btn-update-page-title')
         pageTitleElement.innerText = 'Welcome to Events Handler';
     }); //এখানে anonymous ফাংশনের মাধ্যমে ইভেন্টের কাজ সম্পন্ন করা হয়েছে। (recommended)
 
+
+
+//Text Updated clicking on Button : বাটনে ক্লিক করা মাত্রই, বাটনের সাথে কানেক্টেড input বক্সে থাকা টেক্সটগুলো, ইনপুট বক্সের সাথে কানেক্টেড এলিমেন্ট এ উক্ত টেক্সটগুলো আপডেট হয়ে যাবে।
 document.getElementById('btn-update-text')
-    .addEventListener('click', function(){
-        const textInput = document.getElementById('input-text-write-here');
+    .addEventListener('click', function(){ //এই লাইনটি বাটন (btn-update-text নামে) থেকে click ইভেন্ট লিসেনার যোগ করে। যখন বাটনটি ক্লিক করা হবে, তখন ভিতরে দেওয়া ফাংশনটি কার্যকর হবে।
+        const textInput = document.getElementById('input-text-write-here'); //এই লাইনটি ইনপুট ফিল্ড (যার আইডি input-text-write-here) থেকে text সংগ্রহ করে এবং এটিকে textInput নামে একটি কনস্ট্যান্টে সংরক্ষণ করে।
 
-        const updateText = textInput.value;
+        const updateText = textInput.value; //এই লাইনটি ইনপুট ফিল্ডের মান (যা ব্যবহারকারী লিখেছে) সংগ্রহ করে এবং এটিকে updateText নামে একটি কনস্ট্যান্টে সংরক্ষণ করে।
 
-        const showText = document.getElementById('text-will-showing-here');
-        showText.innerText = updateText;
+        const showText = document.getElementById('text-will-showing-here'); //এই লাইনটি টেক্সট প্রদর্শনের element (যার আইডি text-will-showing-here) থেকে text সংগ্রহ করে এবং এটিকে showText নামে একটি কনস্ট্যান্টে সংরক্ষণ করে।
+        showText.innerText = updateText; //এই লাইনটি প্রদর্শনের element এর ভিতরের টেক্সট (innerText) আপডেট করে এবং এটি ইনপুট ফিল্ডের মান (updateText) দিয়ে পূরণ করে।
     })
 
+
+
+//Comment by Clicking on Button: বাটনে ক্লিক করা মাত্রই, input ফিল্ডের টেক্সটগুলো সংগ্রহ করে, নতুন একটি p এলিমেন্ট তৈরি করে, উক্ত এলিমেন্টের মধ্যে input ফিল্ডের টেক্সট গুলো যুক্ত করে, কন্টেইনারের ভিতরে p এলিমেন্ট টি push করে দিবে।
 document.getElementById('btn-comment-post')
-    .addEventListener('click', function(){
-        const commentInput = document.getElementById('input-comment');
+    .addEventListener('click', function(){ //এই লাইনটি বাটনটির (যার আইডি 'btn-comment-post') সাথে একটি click ইভেন্ট লিসেনার যোগ করে। যখন বাটনটি ক্লিক করা হবে, তখন ভিতরের ফাংশনটি কার্যকর হবে।
+        const commentInput = document.getElementById('input-comment'); //এই লাইনটি ইনপুট ফিল্ডের (যার আইডি 'input-comment') text সংগ্রহ করে এবং এটিকে commentInput নামে একটি কনস্ট্যান্টে সংরক্ষণ করে।
 
-        const newComment = commentInput.value;
+        const newComment = commentInput.value; //এই লাইনটি ইনপুট ফিল্ডের মান (যা ব্যবহারকারী লিখেছে) সংগ্রহ করে এবং এটিকে newComment নামে একটি কনস্ট্যান্টে সংরক্ষণ করে।
 
-        const commentElement = document.createElement('p');
-        commentElement.innerText = newComment;
+        const commentElement = document.createElement('p'); //এই এই লাইনটি একটি নতুন প্যারাগ্রাফ উপাদান তৈরি করে। 
+        commentElement.innerText = newComment; //এই লাইনটি নতুন প্যারাগ্রাফ এর ভিতরের টেক্সট (innerText) ইনপুট ফিল্ডের মান (newComment) দিয়ে পূরণ করে।
 
         const commentContainer = document.getElementById('comment-container');
-        commentContainer.appendChild(commentElement);
+        commentContainer.appendChild(commentElement); //এই লাইন দুটি মন্তব্য কন্টেইনারের (যার আইডি 'comment-container') রেফারেন্স সংগ্রহ করে এবং নতুন প্যারাগ্রাফ উপাদানটি (commentElement) কন্টেইনারে যোগ করে।
+    })
+
+
+
+//Button Desabled and Enable : input ফিল্ডে ডিলিট টাইপ করার মাধ্যমে বাটনটি এনেবল হবে এছাড়া বাটনটি ডিজেবল থাকবে।
+document.getElementById('input-delete')
+    .addEventListener('keyup', function(event){ //এই লাইনটি ইনপুট ফিল্ডের (যার আইডি 'input-delete') সাথে keyup ইভেন্ট লিসেনার যোগ করে। যখন ইনপুট ফিল্ডে কোনো কী চাপানো হবে এবং রিলিজ করা হবে, তখন ভিতরের ফাংশনটি কার্যকর হবে।
+        const inputText = event.target.value; //এই লাইনটি ইভেন্ট থেকে ইনপুট ফিল্ডের মান (ইউজার যা লিখেছে) সংগ্রহ করে এবং এটিকে inputText নামে একটি কনস্ট্যান্টে সংরক্ষণ করে।
+        const btnDelete = document.getElementById('btn-delete'); //এই লাইনটি বাটনের (যার আইডি 'btn-delete') রেফারেন্স সংগ্রহ করে এবং এটিকে btnDelete নামে একটি কনস্ট্যান্টে সংরক্ষণ করে।
+        if (inputText === 'delete'){
+            btnDelete.removeAttribute('disabled');
+        }
+        else{
+            btnDelete.setAttribute('disabled', true);
+        } //এই লাইনগুলি ইনপুট ফিল্ডের মান (inputText) চেক করে। যদি মানটি 'delete' হয়, তবে বাটন থেকে disabled অ্যাট্রিবিউটটি সরিয়ে ফেলা হয়, অর্থাৎ বাটনটি সক্রিয় হয়। যদি মানটি 'delete' না হয়, তবে বাটনে disabled অ্যাট্রিবিউট যোগ করা হয়, অর্থাৎ বাটনটি নিষ্ক্রিয় থাকে।
     })
