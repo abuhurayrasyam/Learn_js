@@ -1,0 +1,42 @@
+<!-- Live Webpage of This Page: https://abuhurayrasyam.github.io/Learn_js/02.Document%20Object%20Model%20and%20Event/event_bubble-stop_propagation-event_delegation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+    <style>
+        body{
+            border: 2px solid blueviolet;
+            margin: 2px;
+        }
+        section{
+            border: 2px solid blue;
+            margin: 2px;
+        }
+        ol{
+            border: 2px solid green;
+            margin: 2px;
+        }
+        li{
+            border: 2px solid red;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1 id="page-title">Explore Event Bubble</h1>
+    <section id="animals-container">
+        <h4 id="animals-title">Favorite Animals</h4>
+        <ol id="animals-list">
+            <li id="cat">Cat</li>
+            <li class="animal">Tiger</li>
+            <li class="animal">Lion</li>
+            <li class="animal">Elephant</li>
+        </ol>
+        <button id="btn-add-more">Add More Animals</button>
+    </section>
+
+    <script src="./03.event_bubble.js"></script>
+</body>
+</html>
