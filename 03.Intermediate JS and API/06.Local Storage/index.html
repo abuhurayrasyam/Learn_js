@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <button onclick="addToLocalStorage()">Add Local Storage</button> <br><br> <!-- this button connected with 02.set-and-get-object_to_local_storage.js -->
+
+    <div>
+        <input id="product-name" type="text" placeholder="Product Name">
+        <input id="product-quantity" type="text" placeholder="Product Quantity">
+        <button onclick="addToCart()">Add to Cart</button>
+
+        <ul id="product-container"></ul>
+    </div> <!-- this div connected with 03.add_to_cart-using_local_storage.js -->
+    
+    <script src="./01.set-and-get-simple_value_to_local_storage.js"></script>
+    <script src="./02.set-and-get-object_to_local_storage.js"></script>
+    <script src="./03.add_to_cart-using_local_storage.js"></script>
+</body>
+</html>
